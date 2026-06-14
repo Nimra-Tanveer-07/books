@@ -7,24 +7,21 @@
     <script src="https://cdn.tailwindcss.com"></script>
     
     <title>Books</title>
+
     <style>
-    /* Hide scrollbar for Chrome, Safari, Edge */
-    ::-webkit-scrollbar {
-        display: none;
-    }
+        ::-webkit-scrollbar {
+            display: none;
+        }
 
-    /* Hide scrollbar for Firefox */
-    html {
-        scrollbar-width: none;
-    }
+        html {
+            scrollbar-width: none;
+        }
 
-    /* Prevent layout shift */
-    body {
-        -ms-overflow-style: none;
-    }
-</style>
+        body {
+            -ms-overflow-style: none;
+        }
+    </style>
 </head>
-
 
 <body class="min-h-screen">
 
@@ -32,7 +29,7 @@
     <div class="fixed inset-0 -z-10">
         <img src="book.png" class="w-full h-full object-cover">
     </div>
-    
+
     <!-- Black overlay -->
     <div class="fixed inset-0 -z-10 bg-black/50"></div>
 
@@ -41,13 +38,15 @@
                 bg-white/30 backdrop-blur-md 
                 shadow-md border-b border-white/20">
 
-        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 py-3 sm:py-4 
+                    flex flex-col sm:flex-row gap-2 sm:gap-0 
+                    justify-between items-center">
 
-            <h1 class="text-xl font-semibold text-white">
+            <h1 class="text-base sm:text-xl font-semibold text-white text-center sm:text-left">
                 Author • Nimra Tanveer
             </h1>
 
-            <div class="text-sm text-white">
+            <div class="text-xs sm:text-sm text-white">
                 Books Collection
             </div>
 
@@ -59,7 +58,7 @@
     <div class="pt-24"></div>
 
     <!-- Search Bar -->
-    <div class="flex justify-center mt-2 px-4">
+    <div class="flex justify-center mt-2 px-3 sm:px-4">
 
         <div class="relative w-full max-w-xl">
 
@@ -73,41 +72,61 @@
 
             <form>
                 <!-- Input -->
-                <input id="searchInput" type="text" placeholder="Search a Book" class="w-full h-12 pl-12 pr-4 rounded-full 
-                       bg-white/60 backdrop-blur-md
-                       border border-white/40
-                       shadow-md
-                       text-gray-800
-                       placeholder-gray-600
-                       outline-none
-                       transition duration-300
-                       focus:bg-white/90
-                       focus:shadow-xl
-                       focus:ring-2 focus:ring-brown-400
-                       hover:shadow-lg">
+                <input id="searchInput" type="text" placeholder="Search a Book"
+                    class="w-full h-11 sm:h-12 pl-12 pr-4 rounded-full 
+                           bg-white/60 backdrop-blur-md
+                           border border-white/40
+                           shadow-md
+                           text-gray-800
+                           placeholder-gray-600
+                           outline-none
+                           transition duration-300
+                           focus:bg-white/90
+                           focus:shadow-xl
+                           focus:ring-2 focus:ring-brown-400
+                           hover:shadow-lg">
+
                 <button type="submit"
-                    class="absolute right-4 top-1/2 -translate-y-1/2 text-yellow-900 px-4 py-2 rounded-full shadow-xl hover:text-amber-600 focus:outline-none">
+                    class="absolute right-3 sm:right-4 top-1/2 -translate-y-1/2 
+                           text-yellow-900 text-sm sm:text-base
+                           px-2 sm:px-4 py-1 sm:py-2 rounded-full 
+                           shadow-xl hover:text-amber-600 focus:outline-none">
                     Search
                 </button>
             </form>
-        </div>
 
+        </div>
     </div>
+
     <!-- Book List Container -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-6xl mx-auto mt-8 mb-8 px-4">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 
+                gap-4 max-w-6xl mx-auto mt-8 mb-8 px-4">
 
         <!-- Book Card -->
-        <div class="book-card bg-black-700/80 backdrop-blur-md w-72  rounded-lg shadow-lg overflow-hidden shadow-white shadow-sm hover:shadow-xl hover:scale-105 transition duration-500">
+        <div class="book-card bg-black-700/80 backdrop-blur-md 
+                    w-full sm:w-72 rounded-lg shadow-lg overflow-hidden 
+                    hover:shadow-xl hover:scale-105 transition duration-500">
 
-            <img src="dreadful_her.png" alt="Book Cover" class="w-full h-64 object-cover">
+            <img src="dreadful_her.png" alt="Book Cover" 
+                 class="w-full h-56 sm:h-64 object-cover">
+
             <div class="p-4">
 
-                <h2 class="text-xl font-semibold text-white">Dreadfull Her</h2>
+                <h2 class="text-lg sm:text-xl font-semibold text-white">
+                    Dreadfull Her
+                </h2>
 
-                <p class="text-white/50 mb-4 italic">A Novel-based book featuring a woman as a main lead and her revolutionary change throughout the series.</p>
-                <a href="dreadful-her.html" class="mt-4 bg-yellow-900 text-white px-4 py-2 rounded-full shadow-md hover:bg-yellow-700 focus:outline-none">
+                <p class="text-white/50 mb-4 italic text-sm sm:text-base">
+                    A Novel-based book featuring a woman as a main lead and her revolutionary change throughout the series.
+                </p>
+
+                <a href="dreadful-her.html"
+                    class="inline-block mt-2 bg-yellow-900 text-white 
+                           px-4 py-2 rounded-full shadow-md 
+                           hover:bg-yellow-700 focus:outline-none">
                     Read More
                 </a>
+
             </div>
         </div>
 
